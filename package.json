@@ -4,7 +4,8 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "keywords": [
     "Electron",
@@ -12,10 +13,11 @@
     "start",
     "tutorial"
   ],
-  "author": "GitHub",
+  "author": "A41K",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^28.0.0"
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
   },
   "dependencies": {
     "jsmediatags": "^3.9.7"
