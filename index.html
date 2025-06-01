@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="now-playing">
+        <div class="album-art"><img id="album-art-image" src="" alt="Album Art"></div>
+        <div class="track-info">
+          <div class="track-name">Track name - Artist name</div>
+          <div class="track-time-and-bar">
+            <div class="track-time">0:00</div>
+            <div class="time-bar-container">
+              <input type="range" class="time-bar" value="0" min="0" max="100">
+            </div>
+          </div>
+          <div class="playback-controls">
+            <button id="prev-button">Prev</button>
+            <button id="play-pause-button">Play/Pause</button>
+            <button id="next-button">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <div class="bpm-control">
+          <span>BPM:</span>
+          <input type="number" class="bpm-input" value="120">
+        </div>
+        <div class="volume-controls">
+          <input type="range" class="volume-slider" min="0" max="100" value="100">
+        </div>
+        <div class="add-file-section">
+          <input type="file" id="add-file-input" accept=".mp3" style="display: none;" multiple>
+          <button id="add-file-button">Add File</button>
+        </div>
+        <div class="settings-section">
+          <button id="settings-button">Settings</button>
+        </div>
+
+        <div id="settings-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Settings</h2>
+            <div class="setting-item">
+
+            </div>
+            <div class="setting-item">
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select">
+                    <option value="dark">Dark</option>
+                    <option value="oled-dark">OLED Dark</option>
+                    <option value="light">Light</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <label for="sound-quality-select">Sound Quality:</label>
+                <select id="sound-quality-select">
+                    <option value="very-low">Very Low (64kbps)</option>
+                    <option value="low">Low (128kbps)</option>
+                    <option value="medium">Medium (256kbps)</option>
+                    <option value="high">High (320kbps)</option>
+                </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="playlist-section">
+        <div class="playlist-header">
+          <div class="playlist-title">Playlist</div>
+          <input type="text" id="playlist-search" placeholder="Search playlist...">
+          <select id="playlist-sort">
+            <option value="default">Default</option>
+            <option value="artist-asc">Artist (A-Z)</option>
+            <option value="artist-desc">Artist (Z-A)</option>
+            <option value="title-asc">Title (A-Z)</option>
+            <option value="title-desc">Title (Z-A)</option>
+          </select>
+          <button class="del-all">Del all</button>
+        </div>
+        <div class="playlist-items">
+
+        </div>
+
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
