@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
+  "name": "a41k-music-player",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Electron application that is definitely a Music listening app and not anything else that you could think of",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
